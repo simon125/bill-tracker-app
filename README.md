@@ -39,4 +39,4 @@ This project will involve much more technologies and tools but it would be hard 
 
 - Don't remember now but for sure I'll update it.
 
-## These things should be enough for now, I need to add some code xD wish me luck and wait for the results :)
+## These should be enough for now, I need to add some code xD wish me luck and wait for the results :)
