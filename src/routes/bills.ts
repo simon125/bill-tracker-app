@@ -1,4 +1,6 @@
 import express from 'express';
+import Bill from '../models/Bill';
+import auth from '../middleware/auth';
 
 const router = express.Router();
 
@@ -6,9 +8,10 @@ const router = express.Router();
 // @desc   Get all users bills
 // @access Private
 
-router.get('/', async (req, res) => {
+router.get('/', [auth], async (req, res) => {
   try {
-    res.status(200).json({ msg: 'Jupi you did it!' });
+    const bills = await Bill.find({ user: req.user.id });
+    res.status(200).json(bills);
   } catch (error) {
     console.error(error);
     res.status(500).send('Server Error');
