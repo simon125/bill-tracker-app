@@ -6,5 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var app = express_1.default();
 var PORT = process.env.PORT || 5000;
-app.use(express_1.default.static('client/build'));
+// app.use(express.static('client/build'));
+app.get('/test', function (req, res) {
+    res.status(200).json({ msg: 'You did it!' });
+});
 app.listen(PORT, function () { return console.log("Server is running on port " + PORT + "..."); });
