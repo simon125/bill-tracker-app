@@ -1,0 +1,32 @@
+{
+  "name": "bill-tracker-app",
+  "version": "1.0.0",
+  "description": "Hi! I am so glad that you are here and started read this description. Let me introduce you a little to this project, to be honest this is my second approach to this app, the first one I had to leave because of lot of wrong practices and approaches to couple things, but now with new skills and knowledge I'll do my best to deliver this app to usage state - my first motivation is I finally want to store my whole bills which I was collecting during last year and half.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon125/bill-tracker-app.git"
+  },
+  "author": "Szymon Oleszek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simon125/bill-tracker-app/issues"
+  },
+  "homepage": "https://github.com/simon125/bill-tracker-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.1",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}
