@@ -27,7 +27,7 @@ coverage
 
 # production
 /build
-
+/dist
 
 # nyc test coverage
 .nyc_output
