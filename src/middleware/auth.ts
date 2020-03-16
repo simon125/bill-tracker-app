@@ -6,9 +6,10 @@ export default function(req: Request, res: Response, next: NextFunction) {
     res.status(401).json({ msg: 'No token, authorization denied' });
   }
   try {
-    req = { _id: 'asjfq4iwhornq7os74' };
+    // req.user.id = 'qwertyu1234567rewq';
+    req.user = 'string';
     next();
   } catch (error) {
-    res.status(401).json({ msg: 'Token is not valid' });
+    res.status(401).json({ msg: error });
   }
 }
