@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
 // @desc   Add bill
 // @access Private
 
-router.post('/', async (req, res) => {
+router.post('/', [auth], async (req: Request, res: Response) => {
   try {
     res.status(200).json({ youWillSaveIt: req.body });
   } catch (error) {
