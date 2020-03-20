@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import config from 'config';
-import jwt from 'jsonwebtoken';
+import jwt, { DecodeOptions } from 'jsonwebtoken';
 
 export default function(req: Request, res: Response, next: NextFunction) {
   const token: string | undefined = req.header('x-auth-token');

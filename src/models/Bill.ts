@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
+import { Bill } from '../interfaces/Bill';
 
-const SingleExpense: Schema = new Schema({
+const SingleExpenseSchema: Schema = new Schema({
   name: String,
   amount: Number,
   price: Number,
@@ -26,11 +27,15 @@ const BillSchema: Schema = new Schema(
       type: Date,
       required: true
     },
-    expenses: [SingleExpense]
+    paymentMethod: {
+      type: String,
+      required: false
+    },
+    expenses: [SingleExpenseSchema]
   },
   {
     timestamps: true
   }
 );
 
-export default mongoose.model('bills', BillSchema);
+export default mongoose.model<Bill>('bills', BillSchema);

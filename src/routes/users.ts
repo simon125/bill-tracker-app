@@ -1,10 +1,12 @@
+// node modules
 import * as express from 'express';
 import { Request, Response } from 'express';
 import { check, validationResult } from 'express-validator';
-import User from '../models/User';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import config from 'config';
+// local modules
+import User from '../models/User';
 
 const router = express.Router();
 
