@@ -37,21 +37,22 @@ const AppContainer = (props: any) => {
         >
           {props.children}
         </Content>
-        {/* <Footer style={{ position: 'relative' }}> */}
         <div style={{ position: 'relative' }}>
           <h3
             style={{
-              bottom: 30,
+              top: '350px',
               left: '50%',
               position: 'absolute',
               zIndex: 3,
-              color: 'white'
+              color: 'white',
+              fontSize: 20,
+              transform: 'translateX(-50%)'
             }}
           >
-            Bill tracker ©2020 Created by Szymon Oleszek
+            Bill tracker ©2020 Created with 💻 by Szymon Oleszek
           </h3>
           <svg
-            style={{ position: 'absolute', zIndex: 2 }}
+            style={{ position: 'absolute', zIndex: 2, top: 0, left: 0 }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
           >
@@ -62,7 +63,6 @@ const AppContainer = (props: any) => {
             ></path>
           </svg>
         </div>
-        {/* </Footer> */}
       </Layout>
     </>
   );
