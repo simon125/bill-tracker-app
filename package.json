@@ -20,13 +20,15 @@
   },
   "homepage": "https://github.com/simon125/bill-tracker-app#readme",
   "dependencies": {
+    "antd": "^4.0.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "config": "^3.3.0",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.4"
+    "mongoose": "^5.9.4",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
