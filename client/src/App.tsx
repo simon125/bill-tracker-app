@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Layout } from 'antd';
 // local modules
 import './App.css';
+import LandingPage from './pages/LandingPage';
 import AppContainer from './components/AppContainer/AppContainer';
 
 const App = () => {
   const routes = (
     <Switch>
-      <Route exact path="/" component={() => <h1>Hello in home</h1>} />
+      <Route exact path="/" component={LandingPage} />
       <Route
         path="/register"
         component={() => <h1>Hello in register screen</h1>}
@@ -28,7 +29,6 @@ const App = () => {
       <Route component={() => <h1>404 ups there is no such resources</h1>} />
     </Switch>
   );
-
   return (
     <Router>
       <Layout className="app-container">
