@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import usersRoute from './routes/users';
 import billsRoute from './routes/bills';
 import authRoute from './routes/auth';
-import { connectDB } from '../config/db';
+import { connectDB } from './config/db';
 
 const app: express.Application = express();
 const PORT = process.env.PORT || 5000;
