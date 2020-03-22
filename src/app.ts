@@ -10,13 +10,13 @@ import { connectDB } from '../config/db';
 const app: express.Application = express();
 const PORT = process.env.PORT || 5000;
 
-connectDB();
+// connectDB();
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
-app.use('/api/v1/users', usersRoute);
-app.use('/api/v1/bills', billsRoute);
-app.use('/api/v1/auth', authRoute);
+// app.use('/api/v1/users', usersRoute);
+// app.use('/api/v1/bills', billsRoute);
+// app.use('/api/v1/auth', authRoute);
 
 app.use(express.static('client/build'));
 

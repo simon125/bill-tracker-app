@@ -2,11 +2,12 @@
   "name": "bill-tracker-app",
   "version": "1.0.0",
   "description": "Hi! I am so glad that you are here and started read this description. Let me introduce you a little to this project, to be honest this is my second approach to this app, the first one I had to leave because of lot of wrong practices and approaches to couple things, but now with new skills and knowledge I'll do my best to deliver this app to usage state - my first motivation is I finally want to store my whole bills which I was collecting during last year and half.",
-  "main": "index.js",
+  "main": "dist/src/app.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/src/app.js",
     "dev": "nodemon src/app.ts",
     "build": "tsc -p .",
+    "postinstall": "npm run build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
