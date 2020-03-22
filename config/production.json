@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://simon125:simon125@bill-tracker-app-dev-4aiv3.mongodb.net/bill-tracker?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://simon125:simon125@bill-tracker-app-dev-4aiv3.mongodb.net/bill-tracker?retryWrites=true",
   "jwtSecret": "secret"
 }

@@ -8,6 +8,9 @@ jobs:
       - run:
           name: Setup Dependencies
           command: npm install
+      # - run:
+      #     name: Build
+      #     command: npm run build
   deploy:
     docker:
       - image: buildpack-deps:trusty
