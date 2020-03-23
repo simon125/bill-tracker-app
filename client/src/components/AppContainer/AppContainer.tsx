@@ -18,15 +18,26 @@ const AppContainer = (props: any) => {
     <>
       {isAuthenticated && <Navigation collapsed={collapsed} />}
       <Layout className="site-layout">
-        <Header className="site-layout-background" style={{ padding: 0 }}>
-          {!isAuthenticated ? (
-            <LandingPageHeader />
-          ) : collapsed ? (
-            <MenuUnfoldOutlined className="trigger" onClick={toggleClick} />
-          ) : (
-            <MenuFoldOutlined className="trigger" onClick={toggleClick} />
-          )}
-        </Header>
+        {isAuthenticated && (
+          <Header
+            className="site-layout-background"
+            style={{
+              padding: 0,
+              height: 40,
+              position: 'fixed',
+              top: 0,
+              zIndex: 5,
+              backgroundColor: '#fff',
+              width: '100%'
+            }}
+          >
+            {collapsed ? (
+              <MenuUnfoldOutlined className="trigger" onClick={toggleClick} />
+            ) : (
+              <MenuFoldOutlined className="trigger" onClick={toggleClick} />
+            )}
+          </Header>
+        )}
         <Content
           className="site-layout-background"
           style={{
@@ -37,32 +48,6 @@ const AppContainer = (props: any) => {
         >
           {props.children}
         </Content>
-        <div style={{ position: 'relative' }}>
-          <h3
-            style={{
-              top: '350px',
-              left: '50%',
-              position: 'absolute',
-              zIndex: 3,
-              color: 'white',
-              fontSize: 20,
-              transform: 'translateX(-50%)'
-            }}
-          >
-            Bill tracker ©2020 Created with 💻 by Szymon Oleszek
-          </h3>
-          <svg
-            style={{ position: 'absolute', zIndex: 2, top: 0, left: 0 }}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-          >
-            <path
-              fill="#40a9ff"
-              fillOpacity="1"
-              d="M0,224L120,202.7C240,181,480,139,720,128C960,117,1200,139,1320,149.3L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
       </Layout>
     </>
   );

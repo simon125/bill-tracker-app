@@ -1,25 +1,17 @@
 import React from 'react';
+import './LandingPage.css';
 
 const LandingPageHeader = () => {
   return (
-    <nav
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        padding: '0 20px',
-        position: 'fixed',
-        top: 0,
-        zIndex: 5,
-        backgroundColor: '#fff',
-        width: '100%'
-      }}
-    >
-      <h2 style={{ textDecoration: 'underline', fontSize: 30 }}>
+    <nav className="navigation">
+      <h2 className="logo" style={{ textDecoration: 'underline' }}>
         Bill tracker
       </h2>
-      <div style={{ display: 'flex', padding: '0 20px', fontSize: 20 }}>
-        <a href="#">Login</a>
-        <a style={{ padding: '0 20px' }} href="#">
+      <div style={{ display: 'flex', padding: '0 15px' }}>
+        <a className="link" href="#">
+          Login
+        </a>
+        <a className="link" style={{ padding: '0 10px' }} href="#">
           Sign up
         </a>
       </div>
