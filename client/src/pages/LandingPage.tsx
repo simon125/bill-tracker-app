@@ -190,7 +190,20 @@ const LandingPage = () => {
           />
         </div>
       </section>
-      <section className="contact-container">contact</section>
+      <section className="quote-container">
+        <h4 className="quote">
+          It's Not About How Much Money You Make, It's How You Control It!
+        </h4>
+        <button className="demo-container__button">
+          Don't wait, create free account!
+        </button>
+      </section>
+      <section className="contact-container">
+        <div className="bg-layer" />
+      </section>
+      <footer>
+        <h4>Bill tracker ©2020 Created with 💻 by Szymon Oleszek</h4>
+      </footer>
     </>
   );
 };
