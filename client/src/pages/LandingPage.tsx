@@ -200,6 +200,55 @@ const LandingPage = () => {
       </section>
       <section className="contact-container">
         <div className="bg-layer" />
+        <div className="contact-container__row">
+          <div className="contact-container__col">
+            <h3 className="contact-title">
+              If you are interested in contact with me you can do this by my
+              socials or just send email by form!
+            </h3>
+            <p className="contact-paragraph">
+              Feel free to review app from technical perspective, visit repo
+              with <b>Bill Tracker</b> source code, report any ideas issues
+              which can improve my app.
+            </p>
+            <p className="contact-paragraph">
+              Please notice that it is one person project, and this is kind of
+              development sandbox but useful tool for me
+            </p>
+          </div>
+
+          <div className="contact-container__col email-form">
+            <div className="form-control">
+              <input
+                placeholder="&nbsp;"
+                value=""
+                className="control-input"
+                id="senderEmailAddress"
+                name="senderEmailAddress"
+                type="text"
+              />
+              <label className="control-label" htmlFor="senderEmailAddress">
+                Email address
+              </label>
+            </div>
+            <div className="form-control">
+              <textarea
+                placeholder=""
+                value=""
+                className="control-input"
+                name="emailContent"
+                id="emailContent"
+                cols={30}
+                rows={6}
+              ></textarea>
+              {/* <input type="text" value="" className="control-input" /> */}
+              <label className="control-label" htmlFor="emailContent">
+                Email content
+              </label>
+            </div>
+            <button className="submit-button">Send email</button>
+          </div>
+        </div>
       </section>
       <footer>
         <h4>Bill tracker ©2020 Created with 💻 by Szymon Oleszek</h4>
