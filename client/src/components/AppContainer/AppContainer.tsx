@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Layout } from 'antd';
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 // local modules
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../Navigation/AppNavigation';
 import LandingPageHeader from '../../pages/LandingPageHeader';
 import './AppContainer.css';
 const { Header, Content, Footer } = Layout;

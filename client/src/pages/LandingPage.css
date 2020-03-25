@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap&subset=latin-ext');
 
+*,
+html {
+  font-family: 'Work Sans', sans-serif;
+}
+
 .navigation-container {
   display: flex;
   justify-content: center;
@@ -9,7 +14,13 @@
   z-index: 3;
   width: 100%;
   font-family: 'Work Sans', sans-serif;
+  transition: all 0.6s ease-in-out;
+  height: 100px;
   /* background: rgba(27, 113, 185, 0.5); */
+}
+.scrolled-navigation {
+  background-color: rgba(27, 113, 185, 0.9);
+  height: 70px;
 }
 
 .navigation {
@@ -18,7 +29,7 @@
   align-items: center;
   max-width: 1200px;
   width: 80vw;
-  height: 100px;
+  height: 100%;
 }
 
 .logo {
@@ -131,6 +142,8 @@
 }
 
 .forms {
+  height: fit-content;
+  transition: height 0.5s;
   width: 30%;
   min-height: 350px;
   position: relative;
@@ -149,6 +162,7 @@
   padding: 20px;
   width: 50%;
   cursor: pointer;
+  outline: transparent;
 }
 
 .switch-button__group button.active {
@@ -160,13 +174,25 @@
   color: #fefefe;
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+  padding: 18px 20px;
+  position: relative;
 }
 
 .control-label {
+  position: absolute;
+  top: 24px;
+  left: 34px;
   letter-spacing: 0.5px;
   font-size: 15px;
   margin-bottom: 5px;
+  transition: all 0.5s;
+}
+
+.control-input:focus + .control-label,
+.control-input:not([value='']) + .control-label {
+  transform: scale(0.9);
+  top: -8px;
+  left: 27px;
 }
 
 .control-input {
@@ -190,21 +216,26 @@
   box-sizing: border-box;
   width: calc(100% - 40px);
   cursor: pointer;
+  transition: background-color 0.4s;
+}
+.submit-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .arrow {
   position: absolute;
   left: 50%;
-  top: 80%;
+  top: 77%;
   z-index: 4;
   margin: 8% 0;
-  color: white;
+  color: #5db7f3;
+  font-size: 23px;
 }
 .fa-arrow-down {
-  color: white;
+  color: #5db7f3;
 }
 .fa-arrow-down:hover {
-  color: white;
+  color: #5db7f3;
 }
 
 .bounce {
@@ -227,4 +258,121 @@
   60% {
     transform: translateY(-15px);
   }
+}
+
+.features-container {
+  font-family: 'Work Sans', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
+  padding-top: 80px;
+  color: #2180c0;
+}
+
+.features-subcontainer {
+  width: 70%;
+}
+
+.features-container__title {
+  text-align: center;
+  font-size: 30px;
+  color: #145e90;
+}
+
+.features-container__subtitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 80px;
+}
+
+.features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.feature {
+  width: 200px;
+}
+
+.icon-wrapper {
+  border: 2px solid #77c5f8;
+  border-radius: 50%;
+  padding: 50px;
+  position: relative;
+}
+
+.feature-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feature-title {
+  margin-top: 80px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #145e90;
+  text-transform: uppercase;
+}
+
+.feature-description {
+  color: #a3a8ab;
+}
+
+.demo-container {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+.demo-container__content-column {
+  width: 40%;
+  margin-right: 50px;
+  padding-left: 200px;
+}
+.demo-container__image-column {
+  width: 47%;
+}
+.demo-container__title {
+  margin-top: 50px;
+  font-size: 30px;
+  color: #145e90;
+  text-transform: uppercase;
+  font-family: 'Work Sans', sans-serif;
+}
+.demo-container__description {
+  width: 70%;
+  font-size: 15px;
+  color: #9ca5ac;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+}
+.demo-container__button {
+  color: #145e90;
+  border: 2px solid #298dcf;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 18px;
+}
+
+.demo-container__button:hover {
+  background-color: #62bcf821;
+}
+.demo-container__image {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: auto;
 }
