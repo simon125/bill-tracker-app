@@ -3,10 +3,10 @@ import React from 'react';
 const RegisterForm = () => {
   return (
     <>
-      <form>
+      <form autoComplete="none">
         <div className="form-control">
           <input
-            autoComplete="off"
+            autoComplete="none"
             value="Szymon"
             className="control-input"
             id="name"
@@ -19,7 +19,7 @@ const RegisterForm = () => {
         </div>
         <div className="form-control">
           <input
-            autoComplete="off"
+            autoComplete="none"
             value=""
             className="control-input"
             id="email"

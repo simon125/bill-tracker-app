@@ -1,12 +1,13 @@
+// node modules
 import React, { useState, useEffect } from 'react';
+// local modules
+import AuthForm from '../components/AuthForm/AuthForm';
+import EmailForm from '../components/EmailForm/EmilForm';
 import Logo from '../staticresources/logo_file.png';
 import ComputerMobile from '../staticresources/computerphonedemo.png';
 import './LandingPage.css';
-import RegisterForm from '../components/RegisterForm/RegisterForm';
-import LoginForm from '../components/LoginForm/LoginForm';
 
 const LandingPage = () => {
-  const [isLoginMode, setIsLoginMode] = useState(false);
   const [isScrolledDown, setIsScrolledDown] = useState(false);
 
   const handleWindowScroll = () => {
@@ -25,10 +26,6 @@ const LandingPage = () => {
     return () => window.removeEventListener('scroll', handleWindowScroll);
   }, [isScrolledDown]);
 
-  const handleOnChangeMode = (e: React.MouseEvent<HTMLElement>) => {
-    const isLogin = e.currentTarget.getAttribute('value') === 'login';
-    setIsLoginMode(isLogin);
-  };
   return (
     <>
       <nav
@@ -80,26 +77,8 @@ const LandingPage = () => {
             Try out demo account!
           </button>
         </div>
-        <div className="forms">
-          <div className="switch-button__group">
-            <button
-              value="register"
-              className={isLoginMode ? 'switch-button' : 'switch-button active'}
-              onClick={handleOnChangeMode}
-            >
-              Register
-            </button>
-            <button
-              value="login"
-              className={isLoginMode ? 'switch-button active' : 'switch-button'}
-              onClick={handleOnChangeMode}
-            >
-              Login
-            </button>
-          </div>
-          {isLoginMode ? <LoginForm /> : <RegisterForm />}
-        </div>
 
+        {/*isLogedin &&*/ true && <AuthForm />}
         <div className="arrow bounce">
           <a className="fa fa-arrow-down fa-2x" href="#"></a>
         </div>
@@ -217,37 +196,13 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className="contact-container__col email-form">
-            <div className="form-control">
-              <input
-                placeholder="&nbsp;"
-                value=""
-                className="control-input"
-                id="senderEmailAddress"
-                name="senderEmailAddress"
-                type="text"
-              />
-              <label className="control-label" htmlFor="senderEmailAddress">
-                Email address
-              </label>
-            </div>
-            <div className="form-control">
-              <textarea
-                placeholder=""
-                value=""
-                className="control-input"
-                name="emailContent"
-                id="emailContent"
-                cols={30}
-                rows={6}
-              ></textarea>
-              {/* <input type="text" value="" className="control-input" /> */}
-              <label className="control-label" htmlFor="emailContent">
-                Email content
-              </label>
-            </div>
-            <button className="submit-button">Send email</button>
-          </div>
+          <EmailForm />
+        </div>
+        <div className="social-container">
+          <span className="fab fa-linkedin fa-2x" />
+          <span className="fab fa-github-square fa-2x" />
+          <span className="fab fa-facebook-square fa-2x" />
+          <span className="fas fa-envelope fa-2x" />
         </div>
       </section>
       <footer>

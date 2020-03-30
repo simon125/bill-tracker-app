@@ -74,7 +74,7 @@ html {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transition: all 0.1s ease-in-out 0s;
-  transition: all 0.1s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
 }
 
 .navigation__nav-link:hover::before {
@@ -92,7 +92,8 @@ html {
   height: 90vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  padding-top: 200px;
+  /* align-items: top; */
 }
 
 .showcase-container__background {
@@ -150,45 +151,20 @@ html {
   z-index: 2;
   background: rgba(2, 42, 75, 0.4);
   border-radius: 3px;
+  overflow: hidden;
 }
 
-.switch-button__group button {
-  background: transparent;
-  box-sizing: border-box;
-  border: 1px solid #2180c0;
-  border-radius: 2px;
-  color: #2180c0;
-  font-size: 30px;
-  padding: 20px;
-  width: 50%;
-  cursor: pointer;
-  outline: transparent;
-}
-
-.switch-button__group button.active {
-  color: #fefefe;
-  border: none;
-}
-
-.form-control {
-  color: #fefefe;
-  display: flex;
-  flex-direction: column;
-  padding: 18px 20px;
-  position: relative;
-}
-
-.control-label {
+/* .control-label {
   position: absolute;
   top: 24px;
   left: 34px;
   letter-spacing: 0.5px;
   font-size: 15px;
   margin-bottom: 5px;
-  transition: all 0.5s;
-}
+  transition: all 0.15s ease-in-out;
+} */
 
-.control-input:focus + .control-label,
+/* .control-input:focus + .control-label,
 .control-input:not([value='']) + .control-label {
   transform: scale(0.9);
   top: -8px;
@@ -204,8 +180,8 @@ html {
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.4px;
-}
-.submit-button {
+} */
+/* .submit-button {
   padding: 15px 0;
   background-color: transparent;
   border-radius: 3px;
@@ -220,7 +196,7 @@ html {
 }
 .submit-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
-}
+} */
 
 .arrow {
   position: absolute;
@@ -283,7 +259,9 @@ html {
 .features-container__subtitle {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 80px;
+  border-bottom: 1px solid #9ca5ac59;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .features {
@@ -416,6 +394,12 @@ html {
   width: 100%;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact-container__row {
   margin-top: 100px;
   z-index: 3;
@@ -448,6 +432,19 @@ html {
   border-radius: 3px;
   height: fit-content;
   padding: 15px 0;
+}
+
+.social-container {
+  position: relative;
+  z-index: 3;
+  color: #fefefe;
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.social-container > span {
+  margin: 0 35px;
+  cursor: pointer;
 }
 
 footer {
