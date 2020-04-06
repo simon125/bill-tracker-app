@@ -1,0 +1,49 @@
+// node modules
+import React from 'react';
+// local modules
+import EmailForm from '../EmailForm/EmailForm';
+import SocialLink from '../SocialLink/SocialLink';
+
+const Contact = () => {
+  return (
+    <section id="contact" className="contact-container">
+      <div className="bg-layer" />
+      <div className="contact-container__row">
+        <div className="contact-container__col">
+          <h3 className="contact-title">
+            If you are interested in contact with me you can do this by my
+            socials or just send email by form!
+          </h3>
+          <p className="contact-paragraph">
+            Feel free to review app from technical perspective, visit repo with{' '}
+            <b>Bill Tracker</b> source code, report any ideas issues which can
+            improve my app.
+          </p>
+          <p className="contact-paragraph">
+            Please notice that it is one person project, and this is kind of
+            development sandbox but useful tool for me
+          </p>
+        </div>
+
+        <EmailForm />
+      </div>
+      <div className="social-container">
+        <SocialLink
+          href="https://www.linkedin.com/in/szymon-oleszek/"
+          icon="fab fa-linkedin"
+        />
+        <SocialLink
+          href="https://github.com/simon125/bill-tracker-app"
+          icon="fab fa-github-square"
+        />
+        <SocialLink
+          href="https://www.facebook.com/szymon.piotr.oleszek"
+          icon="fab fa-facebook-square"
+        />
+        <SocialLink href="mailto:szymqwerty@gmail.com" icon="fas fa-envelope" />
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

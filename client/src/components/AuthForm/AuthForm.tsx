@@ -1,8 +1,8 @@
 // node modules
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // local modules
-import { Styled } from '../common-styled-components/common-styled-components';
+import { SwitchButton, FormContainer, AuthFormButton } from './AuthForm.styled';
 import { FormControl } from '../FormControl/FormControl';
 
 const checkIfAlreadyRegister = () => {
@@ -29,22 +29,22 @@ const AuthForm = () => {
   };
 
   return (
-    <div className="forms">
-      <div className="switch-button__group">
-        <Styled.SwitchButton
+    <FormContainer>
+      <div>
+        <SwitchButton
           value="register"
           isLoginMode={!isLoginMode}
           onClick={handleOnChangeMode}
         >
           Register
-        </Styled.SwitchButton>
-        <Styled.SwitchButton
+        </SwitchButton>
+        <SwitchButton
           value="login"
           isLoginMode={isLoginMode}
           onClick={handleOnChangeMode}
         >
           Login
-        </Styled.SwitchButton>
+        </SwitchButton>
       </div>
       <form autoComplete="off">
         <FormControl
@@ -54,7 +54,6 @@ const AuthForm = () => {
           label={'Name'}
           isLoginMode={isLoginMode}
         />
-
         <FormControl
           value={email}
           setValue={setEmail}
@@ -74,16 +73,15 @@ const AuthForm = () => {
           label={'Repeat password'}
           isLoginMode={isLoginMode}
         />
-
         {/* <div className="form-control">
                 <input value=""  type="checkbox" name="rememberMe" id="rememberMe" />
                 <label htmlFor="rememberMe">Remember me</label>
               </div> */}
-        <Styled.AuthFormButton active={true} onClick={handleAuthSubmit}>
+        <AuthFormButton active={true} onClick={handleAuthSubmit}>
           {isLoginMode ? 'Login' : 'Register'}
-        </Styled.AuthFormButton>
+        </AuthFormButton>
       </form>
-    </div>
+    </FormContainer>
   );
 };
 

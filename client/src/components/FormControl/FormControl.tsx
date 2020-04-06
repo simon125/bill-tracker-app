@@ -1,5 +1,5 @@
 import React from 'react';
-import { Styled } from './FormControlStyle';
+import { Styled } from './FormControl.styled';
 
 interface IFromControlProps {
   label: string;
