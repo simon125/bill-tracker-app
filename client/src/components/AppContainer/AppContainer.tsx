@@ -27,7 +27,7 @@ const AppContainer = (props: any) => {
               top: 0,
               zIndex: 5,
               backgroundColor: '#fff',
-              width: '100%'
+              width: '100%',
             }}
           >
             {collapsed ? (
@@ -42,7 +42,7 @@ const AppContainer = (props: any) => {
           style={{
             margin: isAuthenticated ? '24px 16px' : '',
             padding: isAuthenticated ? 24 : 0,
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
           }}
         >
           {props.children}

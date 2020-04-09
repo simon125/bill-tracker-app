@@ -1,14 +1,16 @@
 import React from 'react';
+import { H2, Button } from './LandingPageSection.styled';
 
 const Quote = () => {
   return (
     <section className="quote-container">
-      <h4 className="quote">
+      <H2 color="primaryLight">
         It's Not About How Much Money You Make, It's How You Control It!
-      </h4>
-      <a href="#home" className="demo-container__button">
+      </H2>
+      {/* change to anchor */}
+      {/* <Button href="#home" className="demo-container__button">
         Don't wait, create free account!
-      </a>
+      </Button> */}
     </section>
   );
 };

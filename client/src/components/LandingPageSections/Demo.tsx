@@ -2,17 +2,19 @@
 import React from 'react';
 // local modules
 import ComputerMobile from '../../staticresources/computerphonedemo.png';
+import { H2, Paragraph } from './LandingPageSection.styled';
 
 const Demo = () => {
   return (
     <section id="demo" className="demo-container">
       <div className="demo-container__content-column">
-        <h3 className="demo-container__title">Demo account!</h3>
-        <p className="demo-container__description">
+        <H2>Demo account!</H2>
+        {/* <h3 className="demo-container__title">Demo account!</h3> */}
+        <Paragraph>
           {' '}
           Do you want see app in action? <b>Let's try it</b> with demo account!
           It's completely <b>free!</b>
-        </p>
+        </Paragraph>
         <p className="demo-container__description">
           Tables, charts and possibilities to customization - isn't that seems
           like excel? Bill Tracker contains aligned tools to show you stats and

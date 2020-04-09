@@ -1,9 +1,15 @@
 // node modules
 import React from 'react';
 // local modules
+import { Button } from './LandingPageSection.styled';
 import BounceArrow from '../BounceArrow/BounceArrow';
 import AuthForm from '../AuthForm/AuthForm';
-import { ContainerImageBg } from './LandingPageSection.styled';
+import {
+  ContainerImageBg,
+  ColorLayer,
+  H1,
+  H3,
+} from './LandingPageSection.styled';
 
 interface HeroProps {
   isScrolledDown: boolean;
@@ -14,25 +20,27 @@ const BounceArrowStyle: React.CSSProperties = {
   left: '50%',
   top: '95%',
   zIndex: 4,
-  transition: 'all 0.4s'
+  transition: 'all 0.4s',
 };
 
 const Hero = (props: HeroProps) => {
   return (
-    // <section id="home" className="showcase-container">
-    <ContainerImageBg flexColumn={false} id="home">
-      <div className="showcase-container__background" />
+    // Here change home to hero
+    <ContainerImageBg containerHeight="high" flexColumn={false} id="home">
+      <ColorLayer />
       <div className="showcase-titles">
-        <h1>
+        <H1>
           Finally you will be know <b>on what</b> and <b>how much</b> you spent{' '}
           <b>money</b>
-        </h1>
-        <h3>
+        </H1>
+        <H3>
           Track your money in easy and safety way with <b>Bill Tracker</b>, just
           enter your expenses, bills to efficient form or take a pic then app
           will take care for the rest of things
-        </h3>
-        <button className="showcase-demo-button">Try out demo account!</button>
+        </H3>
+        <Button fontColor="#eee" borderColor="#298dcf" theme="primary">
+          Try out demo account!
+        </Button>
       </div>
 
       {/*isLogedin &&*/ true && <AuthForm />}
@@ -40,7 +48,7 @@ const Hero = (props: HeroProps) => {
         style={{
           ...BounceArrowStyle,
           opacity: props.isScrolledDown ? 0 : 1,
-          pointerEvents: props.isScrolledDown ? 'none' : 'auto'
+          pointerEvents: props.isScrolledDown ? 'none' : 'auto',
         }}
       />
     </ContainerImageBg>

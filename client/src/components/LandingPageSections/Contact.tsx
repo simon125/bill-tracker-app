@@ -3,6 +3,7 @@ import React from 'react';
 // local modules
 import EmailForm from '../EmailForm/EmailForm';
 import SocialLink from '../SocialLink/SocialLink';
+import { H3, Paragraph } from './LandingPageSection.styled';
 
 const Contact = () => {
   return (
@@ -10,15 +11,15 @@ const Contact = () => {
       <div className="bg-layer" />
       <div className="contact-container__row">
         <div className="contact-container__col">
-          <h3 className="contact-title">
+          <H3 className="contact-title">
             If you are interested in contact with me you can do this by my
             socials or just send email by form!
-          </h3>
-          <p className="contact-paragraph">
+          </H3>
+          <Paragraph>
             Feel free to review app from technical perspective, visit repo with{' '}
             <b>Bill Tracker</b> source code, report any ideas issues which can
             improve my app.
-          </p>
+          </Paragraph>
           <p className="contact-paragraph">
             Please notice that it is one person project, and this is kind of
             development sandbox but useful tool for me

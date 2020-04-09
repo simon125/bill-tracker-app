@@ -6,7 +6,7 @@
   position: fixed;
   z-index: 3;
   width: 100%;
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
   transition: all 0.6s ease-in-out;
   height: 100px;
   /* background: rgba(27, 113, 185, 0.5); */
@@ -89,16 +89,6 @@
   /* align-items: top; */
 }
 
-.showcase-container__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: rgba(27, 113, 185, 0.8);
-  height: 90vh;
-  width: 100%;
-}
-
 .showcase-titles {
   width: 40%;
   z-index: 2;
@@ -107,28 +97,15 @@
 }
 
 .showcase-titles h1 {
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
   font-size: 40px;
   color: #fefefe;
 }
 
 .showcase-titles h3 {
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
   font-size: 20px;
   color: #fefefe;
-}
-
-.showcase-demo-button {
-  border: 3px solid #298dcf;
-  border-radius: 6px;
-  margin-top: 20px;
-  padding: 15px 25px;
-  background: transparent;
-  text-transform: uppercase;
-  font-weight: bolder;
-  cursor: pointer;
-  transition: all 0.4s;
-  font-size: 18px;
 }
 
 .showcase-demo-button:hover {
@@ -192,7 +169,7 @@
 } */
 
 .features-container {
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
 
   display: flex;
   justify-content: center;
@@ -278,7 +255,7 @@
   font-size: 30px;
   color: #145e90;
   text-transform: uppercase;
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
 }
 .demo-container__description {
   width: 70%;

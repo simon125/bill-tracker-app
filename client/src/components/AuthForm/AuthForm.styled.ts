@@ -18,6 +18,10 @@ export const FormContainer = styled.div`
   background: rgba(2, 42, 75, 0.4);
   border-radius: 3px;
   overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 40%;
+  }
 `;
 
 export const SwitchButton = styled.button<ISwitchButton>`

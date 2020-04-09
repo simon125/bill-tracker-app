@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Layout } from 'antd';
 // local modules
-import './App.css';
+import { GlobalStyles } from './gloabl.styled';
 import LandingPage from './pages/LandingPage';
 import AppContainer from './components/AppContainer/AppContainer';
 
@@ -31,7 +31,11 @@ const App = () => {
   );
   return (
     <Router>
-      <Layout className="app-container">
+      <GlobalStyles />
+      <Layout
+        style={{ minHeight: '100vh', maxWidth: '100vw' }}
+        className="app-container"
+      >
         <AppContainer children={routes} />
       </Layout>
     </Router>

@@ -1,28 +1,31 @@
 import React from 'react';
 
+import { H2, H3, H4, Paragraph } from './LandingPageSection.styled';
+
 const Features = () => {
   return (
     <section id="features" className="features-container">
       <div className="features-subcontainer">
-        <h2 className="features-container__title">
+        <H2 color="primaryLight">
+          {/* <H2 className="features-container__title"> */}
           <b>Tracking expenses</b> have never been such <b>easy</b> like now{' '}
           <b>with our app</b>
-        </h2>
-        <p className="features-container__subtitle">
+        </H2>
+        <H3 color="primaryDark">
           These features provide you everything what you need to track your
           money
-        </p>
+        </H3>
         <div className="features">
           <div className="feature">
             <span className="icon-wrapper">
               <span className="feature-icon fas fa-leaf fa-3x" />
             </span>
-            <h3 className="feature-title">Simple UI</h3>
-            <p className="feature-description">
+            <H4>Simple UI</H4>
+            <Paragraph>
               Simplicity and <b>power</b> in one place. Well described and even
               guided tools give you <b>much possibilities</b> with less
               activities.
-            </p>
+            </Paragraph>
           </div>
           <div className="feature">
             <span className="icon-wrapper">
