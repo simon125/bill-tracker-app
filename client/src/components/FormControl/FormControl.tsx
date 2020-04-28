@@ -24,7 +24,7 @@ export const FormControl: React.FunctionComponent<IFromControlProps> = ({
   id,
   setValue,
   isLoginMode = false,
-  isTextarea = false
+  isTextarea = false,
 }) => {
   const handleChange = (
     e:
@@ -39,24 +39,21 @@ export const FormControl: React.FunctionComponent<IFromControlProps> = ({
   };
 
   return isTextarea ? (
-    <div className="form-control-textarea">
-      <textarea
+    <Styled.Container>
+      <Styled.Textarea
         value={value}
         onChange={handleChange}
         autoComplete="none"
         placeholder="&nbsp;"
-        // value=""
-        className="control-input-textarea"
         name="emailContent"
         id="emailContent"
         cols={30}
         rows={6}
-      ></textarea>
-      {/* <input type="text" value="" className="control-input" /> */}
-      <label className="control-label-textarea" htmlFor="emailContent">
+      ></Styled.Textarea>
+      <Styled.TextareaLabel htmlFor="emailContent">
         Email content
-      </label>
-    </div>
+      </Styled.TextareaLabel>
+    </Styled.Container>
   ) : (
     <Styled.FormControl isLoginMode={isLoginMode}>
       <Styled.FormInput

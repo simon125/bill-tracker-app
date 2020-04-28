@@ -2,39 +2,56 @@
 import React from 'react';
 // local modules
 import ComputerMobile from '../../staticresources/computerphonedemo.png';
-import { H2, Paragraph } from './LandingPageSection.styled';
+import {
+  DemoContainer,
+  DemoContentColumn,
+  H2,
+  Paragraph,
+  Button,
+} from './LandingPageSection.styled';
 
 const Demo = () => {
   return (
-    <section id="demo" className="demo-container">
-      <div className="demo-container__content-column">
-        <H2>Demo account!</H2>
-        {/* <h3 className="demo-container__title">Demo account!</h3> */}
-        <Paragraph>
+    <DemoContainer id="demo">
+      <DemoContentColumn>
+        <H2 margin="70px 0 10px 0" color="blueDark">
+          Demo account!
+        </H2>
+        <Paragraph color="grey">
           {' '}
           Do you want see app in action? <b>Let's try it</b> with demo account!
           It's completely <b>free!</b>
         </Paragraph>
-        <p className="demo-container__description">
+        <Paragraph color="grey">
           Tables, charts and possibilities to customization - isn't that seems
           like excel? Bill Tracker contains aligned tools to show you stats and
           even more, and it's still customizable.
-        </p>
-        <p className="demo-container__description">
+        </Paragraph>
+        <Paragraph color="grey">
           Tables, charts and possibilities to customization - isn't that seems
           like excel? Bill Tracker contains aligned tools to show you stats and
           even more, and it's still customizable.
-        </p>
-        <button className="demo-container__button">Go to demo account</button>
-      </div>
-      <div className="demo-container__image-column">
-        <img
-          className="demo-container__image"
-          src={ComputerMobile}
-          alt="Mobile&Computer"
-        />
-      </div>
-    </section>
+        </Paragraph>
+        <Button
+          margin="20px 0 0 0"
+          fontColor="blueDark"
+          borderColor="blueLight"
+        >
+          Go to demo account
+        </Button>
+      </DemoContentColumn>
+
+      <img
+        style={{
+          position: 'relative',
+          top: '-20px',
+          width: '47%',
+          height: 'auto',
+        }}
+        src={ComputerMobile}
+        alt="Mobile&Computer"
+      />
+    </DemoContainer>
   );
 };
 

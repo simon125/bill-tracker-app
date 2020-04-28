@@ -41,41 +41,66 @@ const Label = styled.label`
     left: 26px;
   }
 `;
-const Textarea = styled.textarea``;
-// const LabelT
-
-export const Styled = {
-  FormControl,
-  FormInput,
-  Label
-};
-
-/*
-.form-control-textarea {
+const Container = styled.div`
   color: #fefefe;
   display: flex;
   flex-direction: column;
   padding: 18px 20px;
   position: relative;
-}
+`;
 
-.control-label-textarea {
-  position: absolute;
-  top: 26px;
-  left: 34px;
-  letter-spacing: 0.5px;
-  font-size: 15px;
-  margin-bottom: 5px;
-  transition: all 0.5s;
-}
+const Textarea = styled.textarea`
+  background: transparent;
+  border: none;
+  border: 1px solid #2180c0;
+  border-radius: 4px;
+  padding: 5px 0 5px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+`;
+const TextareaLabel = styled.label`
+position: absolute;
 
-/* .control-input-textarea:not([value='']) + .control-label-textarea */
+top: 26px;
+left: 34px;
+letter-spacing: 0.5px;
+font-size: 15px;
+margin-bottom: 5px;
+transition: all 0.5s;
+${Textarea}:focus ~ &,
+${Textarea}:not([value='']) ~ &,
+${Textarea}:not(:placeholder-shown) ~ & {
+  transform: scale(0.9);
+  top: -7px;
+  left: 26px;
+}
+`;
+
+// .control-input-textarea:not([value='']) + .control-label-textarea */
 // .control-input-textarea:focus + .control-label-textarea,
 // .control-input-textarea:not(:placeholder-shown) + .control-label-textarea {
 //   transform: scale(0.9);
 //   top: -8px;
 //   left: 27px;
 // }
+export const Styled = {
+  FormControl,
+  FormInput,
+  Label,
+  Textarea,
+  TextareaLabel,
+  Container,
+};
+
+/*
+.form-control-textarea {
+
+}
+
+.control-label-textarea {
+
+}
 
 // .control-input-textarea {
 //   background: transparent;
@@ -87,3 +112,4 @@ export const Styled = {
 //   font-weight: bold;
 //   letter-spacing: 0.4px;
 // }
+// */

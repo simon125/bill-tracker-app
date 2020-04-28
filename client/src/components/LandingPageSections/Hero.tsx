@@ -7,6 +7,7 @@ import AuthForm from '../AuthForm/AuthForm';
 import {
   ContainerImageBg,
   ColorLayer,
+  SloganContainer,
   H1,
   H3,
 } from './LandingPageSection.styled';
@@ -26,9 +27,9 @@ const BounceArrowStyle: React.CSSProperties = {
 const Hero = (props: HeroProps) => {
   return (
     // Here change home to hero
-    <ContainerImageBg containerHeight="high" flexColumn={false} id="home">
+    <ContainerImageBg containerHeight="high" flexColumn={false} id="hero">
       <ColorLayer />
-      <div className="showcase-titles">
+      <SloganContainer>
         <H1>
           Finally you will be know <b>on what</b> and <b>how much</b> you spent{' '}
           <b>money</b>
@@ -38,10 +39,15 @@ const Hero = (props: HeroProps) => {
           enter your expenses, bills to efficient form or take a pic then app
           will take care for the rest of things
         </H3>
-        <Button fontColor="#eee" borderColor="#298dcf" theme="primary">
+        <Button
+          margin="40px 0 0 0"
+          fontColor="light"
+          borderColor="blueLight"
+          theme="primary"
+        >
           Try out demo account!
         </Button>
-      </div>
+      </SloganContainer>
 
       {/*isLogedin &&*/ true && <AuthForm />}
       <BounceArrow
