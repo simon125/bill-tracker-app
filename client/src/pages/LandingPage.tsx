@@ -6,7 +6,7 @@ import {
   Features,
   Demo,
   Quote,
-  Contact
+  Contact,
 } from '../components/LandingPageSections';
 import LandingPageNavigation from '../components/Navigation/LandingPageNavigation';
 import './LandingPage.css';

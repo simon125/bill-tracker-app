@@ -16,7 +16,7 @@ interface IFromControlProps {
 
 export const FormControl: React.FunctionComponent<IFromControlProps> = ({
   label,
-  value,
+  value = '',
   onChange,
   onBlur,
   onFocus,
@@ -58,6 +58,7 @@ export const FormControl: React.FunctionComponent<IFromControlProps> = ({
     <Styled.FormControl isLoginMode={isLoginMode}>
       <Styled.FormInput
         autoComplete="off"
+        placeholder=""
         value={value}
         id={id}
         name={id}

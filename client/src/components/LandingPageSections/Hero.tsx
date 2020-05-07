@@ -5,9 +5,9 @@ import { Button } from './LandingPageSection.styled';
 import BounceArrow from '../BounceArrow/BounceArrow';
 import AuthForm from '../AuthForm/AuthForm';
 import {
-  ContainerImageBg,
+  HeroContainer,
   ColorLayer,
-  SloganContainer,
+  SectionColumn,
   H1,
   H3,
 } from './LandingPageSection.styled';
@@ -22,42 +22,59 @@ const BounceArrowStyle: React.CSSProperties = {
   top: '95%',
   zIndex: 4,
   transition: 'all 0.4s',
+  display: window.innerWidth <= 750 ? 'none' : '',
 };
 
 const Hero = (props: HeroProps) => {
   return (
     // Here change home to hero
-    <ContainerImageBg containerHeight="high" flexColumn={false} id="hero">
+    // TODO: change name to Hero container
+    <HeroContainer containerHeight="high" flexColumn={false} id="hero">
       <ColorLayer />
-      <SloganContainer>
-        <H1>
-          Finally you will be know <b>on what</b> and <b>how much</b> you spent{' '}
-          <b>money</b>
-        </H1>
-        <H3>
-          Track your money in easy and safety way with <b>Bill Tracker</b>, just
-          enter your expenses, bills to efficient form or take a pic then app
-          will take care for the rest of things
-        </H3>
-        <Button
-          margin="40px 0 0 0"
-          fontColor="light"
-          borderColor="blueLight"
-          theme="primary"
-        >
-          Try out demo account!
-        </Button>
-      </SloganContainer>
-
-      {/*isLogedin &&*/ true && <AuthForm />}
-      <BounceArrow
+      <div
         style={{
-          ...BounceArrowStyle,
-          opacity: props.isScrolledDown ? 0 : 1,
-          pointerEvents: props.isScrolledDown ? 'none' : 'auto',
+          maxWidth: 1400,
+          display: 'flex',
+          justifyContent: 'space-around',
+          flexWrap: 'wrap',
         }}
-      />
-    </ContainerImageBg>
+      >
+        <SectionColumn>
+          <H1>
+            Finally you will be know <b>on what</b> and <b>how much</b> you
+            spent <b>money</b>
+          </H1>
+          <H3>
+            Track your money in easy and safety way with <b>Bill Tracker</b>,
+            just enter your expenses, bills to efficient form or take a pic then
+            app will take care for the rest of things
+          </H3>
+          <Button
+            margin="40px 0 0 0"
+            fontColor="light"
+            borderColor="blueLight"
+            theme="primary"
+          >
+            Try out demo account!
+          </Button>
+        </SectionColumn>
+
+        {
+          /*isLogedin &&*/ true && (
+            <SectionColumn>
+              <AuthForm />
+            </SectionColumn>
+          )
+        }
+        <BounceArrow
+          style={{
+            ...BounceArrowStyle,
+            opacity: props.isScrolledDown ? 0 : 1,
+            pointerEvents: props.isScrolledDown ? 'none' : 'auto',
+          }}
+        />
+      </div>
+    </HeroContainer>
     // </section>
   );
 };

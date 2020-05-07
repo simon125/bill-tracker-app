@@ -9,19 +9,11 @@ interface IAuthFormButton {
 }
 
 export const FormContainer = styled.div`
-  height: fit-content;
   transition: height 0.5s;
-  width: 30%;
-  min-height: 350px;
-  position: relative;
-  z-index: 2;
+  width: 100%;
   background: rgba(2, 42, 75, 0.4);
   border-radius: 3px;
   overflow: hidden;
-
-  @media (max-width: 1200px) {
-    width: 40%;
-  }
 `;
 
 export const SwitchButton = styled.button<ISwitchButton>`
@@ -35,15 +27,23 @@ export const SwitchButton = styled.button<ISwitchButton>`
   width: 50%;
   cursor: pointer;
   outline: transparent;
+
+  @media (max-width: 900px) {
+    font-size: 23px;
+    padding: 13px;
+  }
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 `;
 
 export const AuthFormButton = styled.button<IAuthFormButton>`
-  padding: 15px 0;
   background-color: transparent;
   border-radius: 3px;
   border: 2px solid #fefefe;
   text-transform: uppercase;
   color: #fefefe;
+  padding: 15px 0;
   margin: 20px;
   box-sizing: border-box;
   width: calc(100% - 40px);
@@ -52,5 +52,14 @@ export const AuthFormButton = styled.button<IAuthFormButton>`
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.15);
+  }
+  @media (max-width: 900px) {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  @media (max-width: 400px) {
+    padding: 10px 0;
+
+    font-size: 15px;
   }
 `;

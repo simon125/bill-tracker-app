@@ -1,7 +1,7 @@
 // node modules
 import React from 'react';
 // local modules
-import ComputerMobile from '../../staticresources/computerphonedemo.png';
+import ComputerMobile from '../../staticresources/computer2.png';
 import {
   DemoContainer,
   DemoContentColumn,
@@ -40,17 +40,17 @@ const Demo = () => {
           Go to demo account
         </Button>
       </DemoContentColumn>
-
-      <img
-        style={{
-          position: 'relative',
-          top: '-20px',
-          width: '47%',
-          height: 'auto',
-        }}
-        src={ComputerMobile}
-        alt="Mobile&Computer"
-      />
+      <div style={{ width: '44%' }}>
+        <img
+          style={{
+            marginTop: 100,
+            width: '100%',
+            height: 'auto',
+          }}
+          src={ComputerMobile}
+          alt="Mobile&Computer"
+        />
+      </div>
     </DemoContainer>
   );
 };

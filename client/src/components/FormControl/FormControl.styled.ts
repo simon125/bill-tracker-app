@@ -60,21 +60,20 @@ const Textarea = styled.textarea`
   letter-spacing: 0.4px;
 `;
 const TextareaLabel = styled.label`
-position: absolute;
-
-top: 26px;
-left: 34px;
-letter-spacing: 0.5px;
-font-size: 15px;
-margin-bottom: 5px;
-transition: all 0.5s;
-${Textarea}:focus ~ &,
-${Textarea}:not([value='']) ~ &,
-${Textarea}:not(:placeholder-shown) ~ & {
-  transform: scale(0.9);
-  top: -7px;
-  left: 26px;
-}
+  position: absolute;
+  top: 26px;
+  left: 34px;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  margin-bottom: 5px;
+  transition: all 0.15s;
+  ${Textarea}:focus ~ &,
+  ${Textarea}:not(:placeholder-shown) ~ & 
+  {
+    transform: scale(0.9);
+    top: -7px;
+    left: 26px;
+  }
 `;
 
 // .control-input-textarea:not([value='']) + .control-label-textarea */

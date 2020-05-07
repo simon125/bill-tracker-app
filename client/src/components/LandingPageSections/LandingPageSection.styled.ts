@@ -34,24 +34,32 @@ const ContainerHeightValues = {
   low: '30vh',
 };
 
-export const Container = styled.section<IContainer>`
+export const SectionContainer = styled.section<IContainer>`
   position: relative;
   display: flex;
   flex-direction: ${(props) => (props.flexColumn ? 'column' : 'row')};
   justify-content: ${(props) =>
     props.flexColumn ? 'space-around' : 'space-around'};
-  height: ${(props) => ContainerHeightValues[props.containerHeight]};
-  padding-top: 20vh;
-
-  @media() {
-  }
 `;
+// height: ${(props) => ContainerHeightValues[props.containerHeight]};
 
-export const ContainerImageBg = styled(Container)`
+export const HeroContainer = styled(SectionContainer)`
   background-image: url(${heroIMG});
   z-index: 2;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: background-size 0.5s linear;
+  padding-top: 150px;
+  min-height: 85vh;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+  }
+  @media (max-width: 400px) {
+    padding-top: 18vh;
+  }
 `;
 
 export const ColorLayer = styled.div`
@@ -80,11 +88,24 @@ export const Button = styled.button<IButton>`
     background: ${theme.blueLightHover};
     color: ${(props) => theme[props.fontColor || 'light']};
   }
+  @media (max-width: 900px) {
+    font-size: 17px;
+    background: ${theme.blueLightHover};
+    padding: 12px 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
+    background: ${theme.blueLightHover};
+    padding: 10px 18px;
+  }
 `;
 
 const commonForText = css<ICommonForText>`
   text-align: ${(props) => props.align || 'inherit'};
   color: ${(props) => theme[props.color || 'light']};
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
 const align = css<{ margin?: string; padding?: string }>`
@@ -96,16 +117,34 @@ export const H1 = styled.h1<IText>`
   ${commonForText}
   ${align}
   font-size: calc(18px + 12 * ((100vw - 320px) / 680));
+  @media (max-width: 900px) {
+    font-size: 32px;
+  }
+  @media (max-width: 400px) {
+    font-size: 25px;
+  }
 `;
 export const H2 = styled.h2<IText>`
   ${commonForText}
   ${align}
   font-size: calc(16px + 9 * ((100vw - 320px) / 680));
+  @media (max-width: 900px) {
+    font-size: 24px;
+  }
+  @media (max-width: 400px) {
+    font-size: 19px;
+  }
 `;
 export const H3 = styled.h3<IText>`
   ${commonForText}
   ${align}
   font-size: calc(13px + 5 * ((100vw - 320px) / 680));
+  @media (max-width: 900px) {
+    font-size: 21px;
+  }
+  @media (max-width: 400px) {
+    font-size: 17px;
+  }
 `;
 export const H4 = styled.h4<IText>`
   ${commonForText}
@@ -113,29 +152,71 @@ export const H4 = styled.h4<IText>`
   text-transform: uppercase;
   font-weight: 600;
   font-size: calc(10px + 4 * ((100vw - 320px) / 680));
+  @media (max-width: 900px) {
+    font-size: 17px;
+  }
+  @media (max-width: 400px) {
+    font-size: 13px;
+  }
 `;
 export const Paragraph = styled.p<IText>`
   ${commonForText}
   ${align}
   font-size: calc(12px + 2 * ((100vw - 320px) / 680));
   line-height: 1.8;
+  @media (max-width: 900px) {
+    font-size: 15px;
+  }
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 `;
 
-export const SloganContainer = styled.div`
+export const SectionColumn = styled.div`
   width: 40%;
   z-index: 2;
   position: relative;
   color: #fefefe;
+  @media (max-width: 900px) {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 `;
 
 export const FeaturesContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const FeatureSubContainer = styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  @media (max-width: 1200px) {
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 790px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
 `;
 
 export const Feature = styled.div`
   width: 200px;
   text-align: center;
+  @media (max-width: 790px) {
+    margin-bottom: 80px;
+  }
 `;
 
 export const FeatureIconWrapper = styled.span`
@@ -143,6 +224,9 @@ export const FeatureIconWrapper = styled.span`
   border-radius: 50%;
   padding: 70px 80px;
   position: relative;
+  @media (max-width: 790px) {
+    padding: 50px 60px;
+  }
 `;
 
 export const FeatureIcon = styled.span`
@@ -158,6 +242,7 @@ export const DemoContainer = styled.div`
   justify-content: center;
   background-color: #f1f1f1;
   padding-bottom: 50px;
+  flex-wrap: wrap-reverse;
 `;
 
 export const DemoContentColumn = styled.div`
@@ -166,6 +251,17 @@ export const DemoContentColumn = styled.div`
   padding-left: 200px;
   p {
     width: 80%;
+  }
+  @media (max-width: 900px) {
+    width: 90%;
+    margin-right: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 400px) {
+    font-size: 17px;
   }
 `;
 
