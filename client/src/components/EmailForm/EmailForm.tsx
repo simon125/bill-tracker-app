@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 // local modules
 import { FormControl } from '../FormControl/FormControl';
+import { EmailContainer } from './EmailForm.styled';
 // import {Styled} from './EmailFormStyle';
 import { AuthFormButton as Button } from '../AuthForm/AuthForm.styled';
 
@@ -10,7 +11,7 @@ const EmilForm = () => {
   const [emailContent, setEmailContent] = useState('');
 
   return (
-    <div className="contact-container__col email-form">
+    <EmailContainer>
       <FormControl
         label="Email address"
         value={emailAddress}
@@ -26,7 +27,7 @@ const EmilForm = () => {
       />
 
       <Button active={true}>Send email</Button>
-    </div>
+    </EmailContainer>
   );
 };
 

@@ -1,6 +1,7 @@
 // node modules
 import React, { useState, useEffect } from 'react';
 // local modules
+import { Paragraph } from '../components/LandingPageSections/LandingPageSection.styled';
 import {
   Hero,
   Features,
@@ -36,14 +37,20 @@ const LandingPage = () => {
       <Demo />
       <Quote />
       <Contact />
-      <footer>
-        <h4>
+      <footer
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Paragraph margin="0" padding="0">
           Bill tracker ©2020 Created with{' '}
           <span role="img" aria-label="laptop">
             💻
           </span>{' '}
           by Szymon Oleszek
-        </h4>
+        </Paragraph>
       </footer>
     </>
   );

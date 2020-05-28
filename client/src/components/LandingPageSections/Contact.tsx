@@ -3,14 +3,21 @@ import React from 'react';
 // local modules
 import EmailForm from '../EmailForm/EmailForm';
 import SocialLink from '../SocialLink/SocialLink';
-import { H3, Paragraph, ColorLayer } from './LandingPageSection.styled';
+import {
+  H3,
+  Paragraph,
+  ColorLayer,
+  ContactSubContainer,
+  ContactSubContainerColumn,
+  ContactContainer,
+} from './LandingPageSection.styled';
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact-container">
+    <ContactContainer id="contact" className="contact-container">
       <ColorLayer />
-      <div className="contact-container__row">
-        <div className="contact-container__col">
+      <ContactSubContainer>
+        <ContactSubContainerColumn>
           <H3 className="contact-title">
             If you are interested in contact with me you can do this by my
             socials or just send email by form!
@@ -25,10 +32,11 @@ const Contact = () => {
             Please notice that it is one person project, and this is kind of
             development sandbox but useful tool for me.
           </Paragraph>
-        </div>
-
-        <EmailForm />
-      </div>
+        </ContactSubContainerColumn>
+        <ContactSubContainerColumn>
+          <EmailForm />
+        </ContactSubContainerColumn>
+      </ContactSubContainer>
       <div className="social-container">
         <SocialLink
           href="https://www.linkedin.com/in/szymon-oleszek/"
@@ -44,7 +52,7 @@ const Contact = () => {
         />
         <SocialLink href="mailto:szymqwerty@gmail.com" icon="fas fa-envelope" />
       </div>
-    </section>
+    </ContactContainer>
   );
 };
 

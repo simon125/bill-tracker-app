@@ -27,8 +27,6 @@ const BounceArrowStyle: React.CSSProperties = {
 
 const Hero = (props: HeroProps) => {
   return (
-    // Here change home to hero
-    // TODO: change name to Hero container
     <HeroContainer containerHeight="high" flexColumn={false} id="hero">
       <ColorLayer />
       <div
@@ -60,7 +58,7 @@ const Hero = (props: HeroProps) => {
         </SectionColumn>
 
         {
-          /*isLogedin &&*/ true && (
+          /*TODO: isLogedin &&*/ true && (
             <SectionColumn>
               <AuthForm />
             </SectionColumn>
@@ -75,7 +73,6 @@ const Hero = (props: HeroProps) => {
         />
       </div>
     </HeroContainer>
-    // </section>
   );
 };
 

@@ -5,6 +5,7 @@ import ComputerMobile from '../../staticresources/computer2.png';
 import {
   DemoContainer,
   DemoContentColumn,
+  DemoImageContainer,
   H2,
   Paragraph,
   Button,
@@ -40,7 +41,7 @@ const Demo = () => {
           Go to demo account
         </Button>
       </DemoContentColumn>
-      <div style={{ width: '44%' }}>
+      <DemoImageContainer>
         <img
           style={{
             marginTop: 100,
@@ -50,7 +51,7 @@ const Demo = () => {
           src={ComputerMobile}
           alt="Mobile&Computer"
         />
-      </div>
+      </DemoImageContainer>
     </DemoContainer>
   );
 };
