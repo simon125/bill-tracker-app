@@ -8,6 +8,7 @@ import LandingPage from './pages/LandingPage';
 import AppContainer from './components/AppContainer/AppContainer';
 
 const App = () => {
+  console.log(123);
   const routes = (
     <Switch>
       <Route exact path="/" component={LandingPage} />
